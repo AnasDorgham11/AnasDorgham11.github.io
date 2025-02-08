@@ -5,111 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <h1 class="logo">My Portfolio</h1>
             <ul>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#embedded">Embedded Systems</a></li>
                 <li><a href="#data-engineering">Data Engineering</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <!-- About Me Section -->
-    <section id="about" class="glass">
-        <h2>About Me</h2>
-        <p>Hi, I'm Anas Dorgham, a passionate Embedded Systems enthusiast with experience in microcontroller programming, hardware design, and robotics. I enjoy building intelligent systems that bridge hardware and software. I'm also exploring Data Engineering to expand my skill set and work on data-driven solutions.</p>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1>Hi, I'm <span class="highlight">[Your Name]</span></h1>
+            <p>Embedded Systems Enthusiast | Aspiring Data Engineer</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a passionate Embedded Systems developer with experience in microcontroller programming, hardware design, and robotics. I'm also exploring Data Engineering to build scalable data-driven solutions. I love solving complex problems and creating innovative systems.</p>
+        </div>
     </section>
 
     <!-- Embedded Systems Section -->
-    <section id="embedded" class="glass">
-        <h2>Embedded Systems</h2>
-        <div class="animation-container">
-            <div class="hardware-animation"></div>
-        </div>
-        <div class="project">
-            <h3>Obstacle Avoiding Robot</h3>
-            <p><strong>Description</strong>: An autonomous robot that detects and avoids obstacles using ultrasonic sensors. It navigates through unknown environments without human intervention.</p>
-            <p><strong>Technologies</strong>:
+    <section id="embedded" class="section">
+        <div class="container">
+            <h2>Embedded Systems</h2>
+            <div class="project-card">
+                <h3>Obstacle Avoiding Robot</h3>
+                <p>An autonomous robot that detects and avoids obstacles using ultrasonic sensors. Built with Arduino and C++.</p>
                 <ul>
-                    <li>Microcontroller: Arduino, ATmega32</li>
-                    <li>Sensors: Ultrasonic Sensor (HC-SR04)</li>
-                    <li>Motor Driver: L298N</li>
-                    <li>Programming: C, C++</li>
+                    <li><strong>Technologies</strong>: Arduino, Ultrasonic Sensor, L298N Motor Driver, C++</li>
+                    <li><strong>Features</strong>: Real-time obstacle detection, PWM motor control</li>
                 </ul>
-            </p>
-            <p><strong>Features</strong>:
-                <ul>
-                    <li>Real-time obstacle detection.</li>
-                    <li>Smooth navigation using PWM motor control.</li>
-                    <li>Low-cost and efficient design.</li>
-                </ul>
-            </p>
-            <p><strong>Challenges</strong>:
-                <ul>
-                    <li>Calibrating the ultrasonic sensor for accurate distance measurement.</li>
-                    <li>Ensuring smooth motor control and obstacle avoidance.</li>
-                </ul>
-            </p>
-            <p><strong>GitHub Repository</strong>: <a href="#">Link to GitHub</a></p>
-            <div class="project-visuals">
-                <img src="images/robot.jpg" alt="Obstacle Avoiding Robot">
-                <img src="images/circuit-diagram.png" alt="Circuit Diagram">
+                <a href="#" class="btn">View Project</a>
             </div>
         </div>
     </section>
 
-    <!-- Data Engineering Section (Placeholder) -->
-    <section id="data-engineering" class="glass">
-        <h2>Data Engineering</h2>
-        <div class="animation-container">
-            <div class="data-animation"></div>
+    <!-- Data Engineering Section -->
+    <section id="data-engineering" class="section">
+        <div class="container">
+            <h2>Data Engineering</h2>
+            <p>I'm currently learning Data Engineering tools like Python, SQL, and Big Data technologies. Stay tuned for future projects!</p>
         </div>
-        <p>I'm currently exploring Data Engineering and learning tools like Python, SQL, and Big Data technologies. Stay tuned for future projects!</p>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="glass">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Embedded Systems</strong>:
-                <ul>
-                    <li>Microcontroller Programming (Arduino, ATmega32).</li>
-                    <li>Sensor Integration (Ultrasonic, IR, etc.).</li>
-                    <li>Motor Control (PWM, H-Bridge).</li>
-                    <li>Circuit Design and Prototyping.</li>
-                    <li>Basic knowledge of RTOS.</li>
-                </ul>
-            </li>
-            <li><strong>Programming Languages</strong>:
-                <ul>
-                    <li>C, C++</li>
-                    <li>Python</li>
-                </ul>
-            </li>
-            <li><strong>Tools</strong>:
-                <ul>
-                    <li>Arduino IDE</li>
-                    <li>Git</li>
-                    <li>Linux</li>
-                </ul>
-            </li>
-        </ul>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Embedded Systems</h3>
+                    <p>Microcontroller Programming, Sensor Integration, Circuit Design</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <p>C, C++, Python, Arduino IDE</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Engineering</h3>
+                    <p>Python, SQL, Big Data (Learning)</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="glass">
-        <h2>Contact</h2>
-        <p>Email: [Your Email]</p>
-        <p>LinkedIn: <a href="[Your LinkedIn Profile]">[Your LinkedIn Profile]</a></p>
-        <p>GitHub: <a href="https://github.com/username">https://github.com/username</a></p>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Let's connect! Feel free to reach out to me for collaborations or opportunities.</p>
+            <div class="contact-info">
+                <a href="mailto:[Your Email]" class="btn"><i class="fas fa-envelope"></i> Email</a>
+                <a href="[Your LinkedIn Profile]" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/username" class="btn"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 [Your Name]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script for Animations -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
 </body>
 </html>
