@@ -1,12 +1,25 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
     line-height: 1.6;
+    transition: background 0.5s, color 0.5s;
 }
 
+/* Light Theme */
+body.light {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0, #333333);
+    color: #333;
+}
+
+/* Dark Theme */
+body.dark {
+    background: linear-gradient(135deg, #000000, #333333, #666666);
+    color: #fff;
+}
+
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -15,7 +28,7 @@ body {
 
 /* Navigation Bar */
 nav {
-    background: #333;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 1rem 0;
     position: sticky;
@@ -89,10 +102,16 @@ nav ul li a {
 
 /* Project Card */
 .project-card {
-    background: #f4f4f4;
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
 }
 
 .project-card h3 {
@@ -102,15 +121,6 @@ nav ul li a {
 
 .project-card p {
     margin-bottom: 10px;
-}
-
-.project-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.project-card ul li {
-    margin-bottom: 5px;
 }
 
 .project-card .btn {
@@ -131,7 +141,7 @@ nav ul li a {
 }
 
 .skill-card {
-    background: #f4f4f4;
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -168,20 +178,62 @@ nav ul li a {
 
 /* Footer */
 footer {
-    background: #333;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
 
-/* Animations */
-.hidden {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s;
+/* Pop-Up Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-.show {
-    opacity: 1;
-    transform: translateY(0);
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+.modal.dark .modal-content {
+    background: #333;
+    color: #fff;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.theme-toggle i {
+    font-size: 1.2rem;
 }
