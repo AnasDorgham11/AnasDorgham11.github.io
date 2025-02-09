@@ -1,10 +1,13 @@
-// Theme Toggle
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
+// Sticky Navigation Bar
+const stickyNav = document.getElementById('sticky-nav');
+const heroSection = document.getElementById('hero');
 
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark');
-    themeToggle.innerHTML = body.classList.contains('dark') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+window.addEventListener('scroll', () => {
+    if (window.scrollY > heroSection.offsetHeight) {
+        stickyNav.classList.add('visible');
+    } else {
+        stickyNav.classList.remove('visible');
+    }
 });
 
 // Pop-Up Modal

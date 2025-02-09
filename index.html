@@ -9,15 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Theme Toggle Button -->
-    <button id="theme-toggle" class="theme-toggle">
-        <i class="fas fa-moon"></i>
-    </button>
-
-    <!-- Navigation Bar -->
-    <nav>
+    <!-- Sticky Toolbar (Hidden Initially) -->
+    <nav id="sticky-nav" class="sticky-nav">
         <div class="container">
-            <h1 class="logo">My Portfolio</h1>
+            <div class="profile">
+                <img src="images/profile.jpg" alt="Your Name" class="profile-img">
+                <span class="profile-name">[Your Name]</span>
+            </div>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -30,9 +28,14 @@
     <!-- Hero Section -->
     <section id="hero">
         <div class="container">
-            <h1>Hi, I'm <span class="highlight">[Your Name]</span></h1>
-            <p>Embedded Systems Enthusiast | Aspiring Data Engineer</p>
-            <a href="#about" class="btn">Learn More</a>
+            <div class="hero-content">
+                <img src="images/profile.jpg" alt="Your Name" class="hero-img">
+                <div>
+                    <h1>Hi, I'm <span class="highlight">[Your Name]</span></h1>
+                    <p>Embedded Systems Enthusiast | Aspiring Data Engineer</p>
+                    <a href="#about" class="btn">Learn More</a>
+                </div>
+            </div>
         </div>
     </section>
 
