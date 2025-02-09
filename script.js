@@ -3,7 +3,9 @@ const stickyNav = document.getElementById('sticky-nav');
 const heroSection = document.getElementById('hero');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > heroSection.offsetHeight) {
+    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+
+    if (window.scrollY > heroBottom) {
         stickyNav.classList.add('visible');
     } else {
         stickyNav.classList.remove('visible');
