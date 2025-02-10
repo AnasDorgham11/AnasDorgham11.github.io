@@ -59,16 +59,43 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-card" onclick="openModal('obstacle-robot')">
-                <h3>Obstacle Avoiding Robot</h3>
-                <p>An autonomous robot that detects and avoids obstacles using ultrasonic sensors. Built with Arduino and C++.</p>
-                <a href="#" class="btn">View Details</a>
+    <div class="projects-container">
+        <button class="dropdown-btn" onclick="toggleProjects('embedded')">Embedded Systems ▼</button>
+        <button class="dropdown-btn" onclick="toggleProjects('data')">Data Engineering ▼</button>
+    
+        <!-- Embedded Systems Projects -->
+        <div id="embedded" class="projects hidden">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1">
+                <p>Obstacle Avoiding Robot</p>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2">
+                <p>Smart Home System</p>
+            </div>
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3">
+                <p>Line Following Robot</p>
             </div>
         </div>
-    </section>
+    
+        <!-- Data Engineering Projects -->
+        <div id="data" class="projects hidden">
+            <div class="project-card">
+                <img src="data_project1.jpg" alt="Project 1">
+                <p>ETL Pipeline with Python</p>
+            </div>
+            <div class="project-card">
+                <img src="data_project2.jpg" alt="Project 2">
+                <p>SQL Data Analysis</p>
+            </div>
+            <div class="project-card">
+                <img src="data_project3.jpg" alt="Project 3">
+                <p>Big Data Processing</p>
+            </div>
+        </div>
+    </div>
+    
 
     <!-- Skills Section -->
     <section id="skills" class="section">

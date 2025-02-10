@@ -37,3 +37,12 @@ function closeModal() {
 gsap.from('nav', { opacity: 0, y: -50, duration: 1 });
 gsap.from('#hero', { opacity: 0, y: 50, duration: 1, delay: 0.5 });
 gsap.from('.section', { opacity: 0, y: 50, duration: 1, stagger: 0.3, scrollTrigger: { trigger: '.section', start: 'top 80%' } });
+
+function toggleProjects(category) {
+    // Hide all project sections
+    document.getElementById('embedded').classList.add('hidden');
+    document.getElementById('data').classList.add('hidden');
+
+    // Show selected project section
+    document.getElementById(category).classList.remove('hidden');
+}
